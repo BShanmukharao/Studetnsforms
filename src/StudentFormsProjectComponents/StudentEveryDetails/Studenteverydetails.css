@@ -1,0 +1,92 @@
+*{
+    font-family:"Roboto";
+}
+.students-container {
+    padding:14px;
+}
+.form-top-container {
+    display:flex;
+}
+.students-form-left-container {
+    width:30%;
+}
+.students-form-middle-container {
+    width:36%;
+}
+.students-form-right-container {
+    width:33%;
+}
+.each-label-input-container {
+    margin:7px 0px 7px 0px;
+    display:flex;
+    align-items:center;
+}
+.label-item {
+    font-weight:bold;
+    color:black;
+    font-size:14px;
+}
+.input-item {
+    outline:none;
+    padding:4px 8px 4px 5px;
+    border-style:solid;
+    border-width:2px;
+    border-radius:4px;
+    border-color:grey;
+    margin-left:10px;
+}
+.twice-input-label{
+    margin-left:10px;
+}
+.students-form-bottom-container {
+    display:flex;
+}
+.twice-input-container {
+    width:50%;
+}
+.rollNo {
+    max-width:100px;
+}
+.five-cards-heading {
+    font-weight:bold;
+    color:black;
+    font-size:14px;
+}
+.bottom-form-container {
+    display:flex;
+    align-items:center;
+    margin-top:10px;
+}
+.bottom-form-left-container {
+    width:20%;
+}
+.bottom-form-right-container {
+    width:80%;
+    display:flex;
+}
+.bottom-form-right-four-container {
+    margin-right:25px;
+}
+.label-container-left {
+    min-width:120px;
+    display:flex;
+    justify-content:end;
+}
+.label-container-end {
+    min-width:120px;
+    display:flex;
+    justify-content:end;
+}
+.shortinput {
+    max-width:40px;
+    margin-left:0px;
+}
+.short-label-input-container {
+    margin-right:40px;
+}
+.student-mobile-input {
+    margin-left:0px;
+}
+.student-four-inputs {
+    max-width:80px;
+}

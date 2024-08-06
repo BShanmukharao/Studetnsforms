@@ -1,0 +1,22 @@
+.formbuttonsul {
+    list-style-type:none;
+    padding-left:0px;
+    display:flex;
+    justify-content:space-between;
+    background-color:lightblue;
+    padding:25px 10px 25px 15px;
+    margin-top:0px;
+}
+.eachButton {
+    font-family:"Roboto";
+    font-weight:bold;
+    padding:4px 5px 4px 5px;
+    cursor:pointer;
+    border-style:solid;
+    border-width:3px;
+    border-radius:4px;
+    border-top:none;
+    border-right:none;
+    border-bottom:none;
+    border-color:rgb(8, 114, 70);
+}
