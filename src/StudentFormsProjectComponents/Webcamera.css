@@ -1,0 +1,25 @@
+.video-container {
+    height:200px;
+    width:250px;
+}
+.icons-container {
+    max-width:250px;
+    padding:10px;
+    display:flex;
+    justify-content:space-around;
+}
+.icons {
+    cursor:pointer;
+    font-size:20px;
+}
+.photo-container {
+    height:200px;
+    width:250px;
+}
+.webcamlengthandheight {
+    max-height:200px;
+    max-width:250px;
+}
+.icon-container {
+    margin-top:10px;
+}

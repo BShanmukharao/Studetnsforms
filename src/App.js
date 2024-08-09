@@ -1,11 +1,11 @@
+import { useRef } from 'react';
 import StudentFormsProject from '../src/StudentFormsProject'
 import './App.css';
 
-const App = () => (
-  <div>
-      <StudentFormsProject />
-  </div>
-)
+function App() {
+  return (
+    <StudentFormsProject />
+  )
+}
 
-export default App;
- 
+export default App
