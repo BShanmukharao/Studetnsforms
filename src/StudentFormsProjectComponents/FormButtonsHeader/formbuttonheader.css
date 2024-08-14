@@ -2,15 +2,97 @@
     font-family:"poppins", sans-serif;
     box-sizing: border-box;
 }
-.formbuttonsul {
+.navBarUl {
     list-style-type:none;
     padding-left:0px;
-    display:flex;
-    justify-content:space-between;
-    background-color:lightblue;
-    padding:30px 60px 30px 60px;
+    margin-left:0px;
     margin-bottom:1px;
 }
-.eachButton {
-    min-width:120px;
+
+.mobile-nav-bar {
+  background-color:hsl(203, 53%, 74%);
 }
+.above-mobile-nav-bar {
+  background-color:hsl(203, 53%, 74%);
+}
+.icons-button {
+  border-width:0px;
+  background-color:transparent;
+}
+.mobileachNavItem {
+  cursor:pointer;
+  margin-top:10px;
+  font-weight:bold;
+}
+.above-mobile-devices-ul {
+  display:flex;
+  justify-content:center;
+}
+.aboveMobileachNavItemButton {
+  padding:3px 8px 3px 8px;
+  margin:3px;
+  border-style:solid;
+  border-width:1px;
+  font-size:14px;
+  font-family:"Roboto";
+  font-weight:bold;
+  border-radius:15px;
+  cursor:pointer;
+  background-color:rgb(142, 189, 243);
+}
+
+@media (max-width:992px){
+  .mobile-nav-bar {
+    display:block;
+  }
+  .above-mobile-nav-bar {
+      display:none;
+  }
+}
+@media (min-width:993px){
+  .mobile-nav-bar {
+    display:none;
+  }
+  .above-mobile-nav-bar {
+      display:block;
+  }
+}
+@media (min-width:1200px) {
+  .above-mobile-devices-ul {
+    display:flex;
+    justify-content:space-around;
+  }
+  .aboveMobileachNavItemButton {
+    padding:3px 8px 3px 8px;
+    margin:3px;
+    border-style:solid;
+    border-width:1px;
+    font-size:14px;
+    font-family:"Roboto";
+    font-weight:bold;
+    border-radius:15px;
+    cursor:pointer;
+    background-color:rgb(142, 189, 243);
+  }
+}
+@media (min-width:1350px) {
+  .above-mobile-devices-ul {
+    display:flex;
+    justify-content:space-around;
+  }
+  .aboveMobileachNavItemButton {
+    min-width:110px;
+    padding:3px 8px 3px 8px;
+    margin:3px;
+    border-style:solid;
+    border-width:1px;
+    font-size:14px;
+    font-family:"Roboto";
+    font-weight:bold;
+    border-radius:12px;
+    cursor:pointer;
+    background-color:rgb(142, 189, 243);
+  }
+}
+
+

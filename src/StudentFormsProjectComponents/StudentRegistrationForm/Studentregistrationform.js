@@ -8,57 +8,58 @@ function Studentregistrationform() {
     const [userPassword, setPassword] = useState("");
     const [userConfirmPassword, setConfirmPassword] = useState("");
     const [userPhone, setUserPhone] = useState("");
-    const [isPasswordCorrect, setPasswordvalue] = useState(false)
 
     const getFormData = (event) => {
         event.preventDefault();
         if (userPassword !== userConfirmPassword) {
-            setPasswordvalue(true);
+            alert("password and confirmpassword didn't match");
         }
-        else {
-            setPasswordvalue(false);
-            const newUser = { userName, userEmail, userPassword, userConfirmPassword, userPhone }
-            console.log(newUser)
-            setUserName("")
-            setUserEmail("")
-            setPassword("")
-            setConfirmPassword("")
-            setUserPhone("")
-        }
-    }
 
-    return (
-        <div className='form-bg-container'>
-            <form className='form-container' onSubmit={getFormData}>
-                <h1 className='form-main-heading'>REGISTRATION FORM</h1>
-                <div className='each-label-input-container'>
-                    <label htmlFor='FULLNAME' className='each-label-item'>FULL NAME</label><br />
-                    <input type="text" id="FULLNAME" value={userName} onChange={(event) => setUserName(event.target.value)} className='each-input-item' placeholder='Enter fullname' required />
-                </div>
-                <div className='each-label-input-container'>
-                    <label htmlFor='EMAIL' className='each-label-item'>EMAIL</label><br />
-                    <input type="email" id="EMAIL" value={userEmail} onChange={(event) => setUserEmail(event.target.value)} className='each-input-item' placeholder='Enter email' required />
-                </div>
-                <div className='each-label-input-container'>
-                    <label htmlFor='PASSWORD' className='each-label-item'>PASSWORD</label><br />
-                    <input type="password" id="PASSWORD" value={userPassword} onChange={(event) => setPassword(event.target.value)} className='each-input-item' placeholder='Enter password' required />
-                </div>
-                <div className='each-label-input-container'>
-                    <label htmlFor='CONFIRMPASSWORD' className='each-label-item'>CONFIRM PASSWORD</label><br />
-                    <input type="password" id="CONFIRMPASSWORD" value={userConfirmPassword} onChange={(event) => setConfirmPassword(event.target.value)} className='each-input-item' placeholder='Enter confirm password' required />
-                </div>
-                <div className='each-label-input-container'>
-                    <label htmlFor='PHONENUMBER' className='each-label-item'>PHONE NUMBER</label><br />
-                    <input type="tel" id="PHONENUMBER" value={userPhone} onChange={(event) => setUserPhone(event.target.value)} className='each-input-item' placeholder='Enter phone' required />
-                </div>
-                <div className='each-label-input-container'>
-                    <button className="submit-button" type='submit'>SUBMIT</button>
-                </div>
-                {isPasswordCorrect && <p className={`user-credential-refer ${'error'}`}>password didn't match</p>}
-                <p className='user-credential-refer'>do you have an account? <a className='login-register-anchor' > login here</a></p>
-            </form>
-        </div>
-    )
+        const phoneNumberRegex = /^(\+1\s?)?\(?(\d{3})\)?[\s.-]?(\d{3})[\s.-]?(\d{4})$/;
+        if (!phoneNumberRegex.test(userPhone)) {
+            alert('Invalid phone number format');
+        }
+
+        const newUser = { userName, userEmail, userPassword, userConfirmPassword, userPhone }
+        console.log(newUser)
+        setUserName("")
+        setUserEmail("")
+        setPassword("")
+        setConfirmPassword("")
+        setUserPhone("")
+}
+
+return (
+    <div className='form-bg-container'>
+        <form className='form-container' onSubmit={getFormData}>
+            <h1 className='form-main-heading'>REGISTRATION FORM</h1>
+            <div className="form-floating mb-3">
+                <input type="text" onChange={(event) => setUserName(event.target.value)} value={userName} id="RegistrationUserNameInput" className="form-control" placeholder="fullname" required />
+                <label htmlFor="RegistrationUserNameInput">Full Name</label>
+            </div>
+            <div className="form-floating mb-3">
+                <input type="email" onChange={(event) => setUserEmail(event.target.value)} value={userEmail} id="RegistrationEmailInput" className="form-control" placeholder="sample@gmail.com" required />
+                <label htmlFor="RegistrationEmailInput">Email</label>
+            </div>
+            <div className="form-floating mb-3">
+                <input type="password" onChange={(event) => setPassword(event.target.value)} value={userPassword} id="RegistrationPasswordInput" className="form-control" placeholder="password" required />
+                <label htmlFor="RegistrationPasswordInput">Password</label>
+            </div>
+            <div className="form-floating mb-3">
+                <input type="password" onChange={(event) => setConfirmPassword(event.target.value)} value={userConfirmPassword} id="RegistrationComfirmPasswordInput" className="form-control" placeholder="confirmpassword" required />
+                <label htmlFor="RegistrationComfirmPasswordInput">Confirm Password</label>
+            </div>
+            <div className="form-floating mb-3">
+                <input type="tel" onChange={(event) => setUserPhone(event.target.value)} value={userPhone} id="RegistrationPhoneInput" className="form-control" placeholder="phonenumber" required />
+                <label htmlFor="RegistrationPhoneInput">Phone No</label>
+            </div>
+            <div className='submit-button-container mb-3'>
+                <button className="submit-button" type='submit'>SUBMIT</button>
+            </div>
+            <p className='user-credential-refer'>Already you have an account? <span className='login-register-anchor'> login here</span></p>
+        </form>
+    </div>
+)
 }
 
 export default Studentregistrationform

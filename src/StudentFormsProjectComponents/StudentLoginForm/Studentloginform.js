@@ -1,39 +1,47 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import './Studentloginform.css'
 
-function Studentloginform() {
-    const [userName, setUserName] = useState("");
-    const [userPassword, setUserPassword] = useState("");
+function Studentloginform(props) {
+    const [getUserName, setUserName] = useState("");
+    const [getUserPassword, setUserPassword] = useState("");
+
+    const navigate = useNavigate();
 
     const getFormData = (event) => {
         event.preventDefault();
-        const newUser = {userName,userPassword}
-        console.log(newUser)
-        setUserName("")
-        setUserPassword("")
-    }
+        const newUser = { getUserName, getUserPassword }
+        if ((getUserName !== "asc") && (getUserPassword !== "1230")) {
+            alert("Invalid username and password")
+        }
+        if ((getUserName !== "asc") && (getUserPassword === "1230")) {
+            alert("Invalid username")
+        }
+        if ((getUserName === "asc") && (getUserPassword !== "1230")) {
+            alert("Invalid password")
+        }
+        if ((getUserName === "asc") && (getUserPassword === "1230")) {
 
-    const setUsername = (event) => {
-        setUserName(event.target.value)
-    }
+            navigate('/home');
 
-    const setUserpassword = (event) => {
-        setUserPassword(event.target.value)
+            setUserName("")
+            setUserPassword("")
+        }
     }
 
     return (
         <div className='form-bg-container'>
             <form className='form-container' onSubmit={getFormData}>
                 <h1 className='form-main-heading'>LOGIN FORM</h1>
-                <div className='each-label-input-container'>
-                    <label htmlFor='USERNAME' className='each-label-item'>USERNAME</label><br />
-                    <input type="text" id="USERNAME" value={userName} className='each-input-item' placeholder='Enter Username' onChange={setUsername} required/>
+                <div className="form-floating mb-4">
+                    <input type="text" onChange={(event) => setUserName(event.target.value)} value={getUserName} id="LoginUserNameInput" className="form-control" placeholder="fullname" required />
+                    <label htmlFor="LoginUserNameInput">User Name</label>
                 </div>
-                <div className='each-label-input-container'>
-                    <label htmlFor='PASSWORD' className='each-label-item'>PASSWORD</label><br />
-                    <input type="password" id="PASSWORD" value={userPassword} className='each-input-item' placeholder='Enter Password' onChange={setUserpassword} required/>
+                <div className="form-floating mb-3">
+                    <input type="password" onChange={(event) => setUserPassword(event.target.value)} value={getUserPassword} id="LoginPasswordInput" className="form-control" placeholder="Password" required />
+                    <label htmlFor="LoginPasswordInput">Password</label>
                 </div>
-                <div className='each-label-input-container'>
+                <div className='submit-button-container mb-3'>
                     <button className="submit-button" type='submit'>SUBMIT</button>
                 </div>
                 <p className='user-credential-refer'>you don't have an account? <span className='login-register-anchor'> register here</span></p>

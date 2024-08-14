@@ -23,3 +23,59 @@
 .icon-container {
     margin-top:10px;
 }
+
+
+/* xs approach styls @media(max-width : 576px)*/
+
+@media (max-width: 576px) {
+    .webcamlengthandheight {
+        max-height:200px;
+        max-width:230px;
+    }
+}
+
+/* xs and sm approach styls @media(min-width : 577px) and (max-width : 768px)*/
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .webcamlengthandheight {
+        max-height:200px;
+        max-width:250px;
+    }
+}
+
+/* sm and md approach styls @media(min-width : 769px) and (max-width : 992px)*/
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .webcamlengthandheight {
+        max-height:200px;
+        max-width:250px;
+    }
+}
+
+
+/* md and lg approach styls @media(min-width : 993px) and (max-width : 1200px)*/
+
+@media (min-width: 993px) and (max-width: 1200px) {
+    .webcamlengthandheight {
+        max-height:200px;
+        max-width:250px;
+    }
+}
+
+/* lg and xl approach styls @media(min-width : 1201px) and (max-width : 1400px)*/
+
+@media(min-width : 1201px) and (max-width : 1400px) {
+    .webcamlengthandheight {
+        max-height:200px;
+        max-width:250px;
+    }
+}
+
+/* xl approach styls @media(min-width : 1201px) and (max-width : 1400px)*/
+
+@media(min-width : 1401px){
+    .webcamlengthandheight {
+        max-height:200px;
+        max-width:400px;
+    }
+}

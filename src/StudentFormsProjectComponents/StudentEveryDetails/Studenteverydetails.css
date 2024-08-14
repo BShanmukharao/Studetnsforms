@@ -1,102 +1,322 @@
-*{
-    font-family:"poppins", sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
-/*--------------main-container open--------------*/
+
 .students-container {
-    padding:20px 60px 20px 60px;
-    margin-top:0px;
-    background-image:linear-gradient(lightblue,rgb(171, 247, 156));
+    padding: 30px 20px 30px 20px;
+    background-color: rgb(205, 232, 241);
+    width: 100%;
 }
-/*--------------main-container close--------------*/
 
-/*--------------forms-containers open------------*/
 .form-top-container {
-    display:flex;
-    justify-content:space-between;
+    display: flex;
+    justify-content: space-between;
 }
+
 .form-center-container {
-    width:80%;
-}
-.form-bottom-container {
-    display:flex;
-    align-items:center;
-    margin-top:20px;
-}
-/*--------------forms-containers close------------*/
-
-/*--------------forms-containers -> form-top-container open 27 43 18 17------------*/
-.students-form-left-container { 
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-}
-.students-form-center-container {
-    display:flex;
+    display: flex;
     flex-direction:column;
 }
-.students-form-right-container {
-    display:flex;
-    flex-direction:column;
-}
-.students-form-webcameraa-container {
-    padding:10px;
-}
-/*--------------forms-containers -> form-top-container open------------*/
 
-.each-label-input-container {
-    margin:10px 0px 10px 0px;
-    display:flex;
-    align-items:center;
+.students-form-left-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.label-input-container {
+    margin: 0px 0px 15px 0px;
+}
 
-/*------------------inputs fields start-----------------*/
+.each-label-item {
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 14px;
+    color: rgb(70, 67, 67);
+}
+
 .input-item {
-    outline:none;
-    padding:4px 8px 4px 5px;
-    border-style:solid;
-    border-width:2px;
-    border-radius:4px;
-    border-color:#c5e9f0;
-    font-size:15px;
-    min-width:320px;
-    min-height:40px;
+    outline: none;
+    padding: 10px 8px 10px 8px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    border-color: rgb(163, 223, 166);
+    font-size: 14px;
+    width: 320px;
+    height: 40px;
 }
-.twice-input-container {
-    margin-left:20px;
+
+.students-form-center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-/*------------------inputs fields end-----------------*/
+
+.students-form-right-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.students-form-webcamera-container {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .student-of-same-family-heading {
-    font-weight:bold;
-    color:black;
-    font-size:18px;
-    margin-top:25px;
+    font-weight: bold;
+    color: black;
+    font-size: 18px;
+    margin-top: 25px;
 }
+
 .students-form-bottom-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.second-label-input-conteiner {
+    margin-top: 10px;
+}
+
+.second-form-input-item {
+    outline: none;
+    padding: 10px 8px 10px 8px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+    height: 40px;
+    margin-right: 18px;
+    border-color: rgb(163, 223, 166);
+}
+
+.third-form-input-item {
+    outline: none;
+    padding: 10px 8px 10px 8px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+    height: 40px;
+    margin-right: 18px;
+    border-color: rgb(163, 223, 166);
+}
+
+.form-bottom-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.bottom-buttons-container {
+    list-style-type: none;
+    padding-left: 0px;
+    margin-left: 0px;
+    display: flex;
+    margin-top: 15px;
+}
+
+.each-bottom-button {
+    margin-right: 10px;
+}
+
+.form-bottom-container-ul {
+    list-style-type:none;
+    padding-left:0px;
+    margin-left:0px;
+    margin-top:15px;
     display:flex;
 }
-.second-form-input-item {
-    outline:none;
-    padding:4px 8px 4px 5px;
-    border-style:solid;
-    border-width:2px;
-    border-radius:4px;
-    border-color:#c5e9f0;
-    font-size:15px;
-    min-width:269px;
-    min-height:40px;
+.each-bottom-anchor {
     margin-right:18px;
+    cursor:pointer;
+    font-family:"Roboto";
 }
-.third-form-input-item {
-    outline:none;
-    padding:4px 8px 4px 5px;
-    border-style:solid;
-    border-width:2px;
-    border-radius:4px;
-    border-color:#c5e9f0;
-    font-size:15px;
-    min-width:269px;
-    min-height:40px;
-    margin-right:18px;
+@media (max-width:530px) {
+    .each-bottom-anchor {
+        margin-right:10px;
+        cursor:pointer;
+        font-family:"Roboto";
+        font-size:15px;
+    }
+}
+@media (max-width:440px) {
+    .each-bottom-anchor {
+        margin-right:10px;
+        cursor:pointer;
+        font-family:"Roboto";
+        font-size:11px;
+    }
+}
+@media (max-width:360px) {
+    .each-bottom-anchor {
+        margin-right:10px;
+        cursor:pointer;
+        font-family:"Roboto";
+        font-size:9px;
+    }
+}
+@media (max-width:310px) {
+    .each-bottom-anchor {
+        margin-right:10px;
+        cursor:pointer;
+        font-family:"Roboto";
+        font-size:7px;
+    }
+}
+
+/* xs approach styls @media(max-width : 576px)*/
+
+@media (max-width: 576px) {
+    .label-input-container {
+        margin: 0px 0px 15px 0px;
+        width: 100%;
+    }
+
+    .input-item {
+        outline: none;
+        padding: 10px 8px 10px 8px;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 4px;
+        border-color: rgb(163, 223, 166);
+        font-size: 14px;
+        width: 100%;
+        height: 40px;
+    }
+    
+}
+/* xs and sm approach styls @media(min-width : 577px) and (max-width : 768px)*/
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .label-input-container {
+        margin: 0px 0px 15px 0px;
+        width: 100%;
+    }
+
+    .input-item {
+        outline: none;
+        padding: 10px 8px 10px 8px;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 4px;
+        border-color: rgb(163, 223, 166);
+        font-size: 14px;
+        width: 100%;
+        height: 40px;
+    }
+}
+
+/* sm and md approach styls @media(min-width : 769px) and (max-width : 992px)*/
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .label-input-container {
+        margin: 0px 0px 15px 0px;
+        width: 100%;
+    }
+
+    .input-item {
+        outline: none;
+        padding: 10px 8px 10px 8px;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 4px;
+        border-color: rgb(163, 223, 166);
+        font-size: 14px;
+        width: 100%;
+        height: 40px;
+    }
+}
+
+
+/* md and lg approach styls @media(min-width : 993px) and (max-width : 1200px)*/
+
+@media (min-width: 993px) and (max-width: 1200px) {
+    .label-input-container {
+        margin: 0px 0px 15px 0px;
+        width: 100%;
+    }
+
+    .input-item {
+        outline: none;
+        padding: 10px 8px 10px 8px;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 4px;
+        border-color: rgb(163, 223, 166);
+        font-size: 14px;
+        width: 100%;
+        height: 40px;
+    }
+}
+
+/* lg and xl approach styls @media(min-width : 1201px) and (max-width : 1400px)*/
+
+@media(min-width : 1201px) and (max-width : 1400px) {
+    .label-input-container {
+        margin: 0px 0px 15px 0px;
+        width: 100%;
+    }
+
+    .input-item {
+        outline: none;
+        padding: 10px 8px 10px 8px;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 4px;
+        border-color: rgb(163, 223, 166);
+        font-size: 14px;
+        width: 100%;
+        height: 40px;
+    }
+}
+
+/* xl approach styls @media(min-width : 1201px) and (max-width : 1400px)*/
+
+@media(min-width : 1401px) {
+    .students-container {
+        padding: 20px 60px 20px 60px;
+        background-color: rgb(205, 232, 241);
+        width: 100%;
+    }
+
+    .label-input-container {
+        margin: 0px 0px 15px 0px;
+        width: 90%;
+    }
+
+    .input-item {
+        outline: none;
+        padding: 10px 8px 10px 8px;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 4px;
+        border-color: rgb(163, 223, 166);
+        font-size: 14px;
+        width: 100%;
+        height: 40px;
+    }
+    .form-center-container {
+        display: flex;
+        flex-direction:column;
+        margin-left:20px;
+        margin-bottom:15px;
+    }
+    .form-bottom-container-ul {
+        list-style-type:none;
+        padding-left:0px;
+        margin-left:20px;
+        margin-top:8px;
+        display:flex;
+    }
 }
